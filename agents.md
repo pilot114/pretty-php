@@ -2,7 +2,7 @@
 
 This file provides guidance to AI coding agents (Claude Code, Codex, etc.) working in this repository,
 followed by the complete API documentation. For project overview, installation and quick start,
-see [README.md](README.md).
+see [readme.md](readme.md).
 
 ## Table of Contents
 
@@ -837,6 +837,18 @@ $packet = new ICMPPacket(
 
 ## See Also
 
-- [README.md](README.md) - Project overview and quick start
+- [readme.md](readme.md) - Project overview and quick start
 - [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
 - [ROADMAP.md](ROADMAP.md) - Future development plans
+
+## Команды
+
+Цели Makefile одинаковые во всех проектах `~/projects` (`make help` — список):
+
+- `make install` — поставить зависимости
+- `make dev` — запустить для разработки
+- `make test` — тесты
+- `make lint` — статический анализ
+- `make build` — сборка
+- `make audit` — уязвимости в зависимостях
+- `make outdated` — устаревшие зависимости

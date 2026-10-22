@@ -51,7 +51,7 @@ composer mutate    # Mutation testing (requires Xdebug, minimum score 85%)
 - Test files mirror the source layout under `tests/Unit/`; helper classes live in `tests/Support/`.
 - Line coverage is kept at **100%** and enforced in CI.
 - Mutation testing (`composer mutate`) must stay above 85%. Declare tested classes with `mutates(...)` at the top
-  of each test file and prefer exact assertions (see "Mutation Testing" in [AGENTS.md](AGENTS.md)).
+  of each test file and prefer exact assertions (see "Mutation Testing" in [agents.md](agents.md)).
 - Tests must not require network access or root privileges. Use local resources instead
   (`file://` URLs, the built-in PHP server, UDP sockets on `127.0.0.1`).
 - Code that genuinely cannot run in the test process (root-only syscalls, failure branches that

@@ -157,7 +157,7 @@ For security concerns, please see [SECURITY.md](SECURITY.md).
 
 ## Documentation
 
-- 📖 [Full Documentation](AGENTS.md)
+- 📖 [Full Documentation](agents.md)
 - 🗺️ [Roadmap](ROADMAP.md)
 - ⚡ [Performance Guide](docs/PERFORMANCE.md)
 - 🔐 [Security Policy](SECURITY.md)

@@ -22,3 +22,33 @@ shell: image ## Interactive shell in the dev image, project mounted into the wor
 		-v "$(CURDIR)":$(WORKDIR) \
 		-w $(WORKDIR) \
 		$(IMAGE) bash
+
+# --- стандартные цели ~/projects (make help) ---
+
+.PHONY: install
+install: ## поставить зависимости
+	composer install
+
+.PHONY: dev
+dev: ## запустить для разработки
+	@echo "запускать нечего: это библиотека"
+
+.PHONY: test
+test: ## тесты
+	composer test
+
+.PHONY: lint
+lint: ## статический анализ
+	composer check
+
+.PHONY: build
+build: ## сборка
+	@echo "сборки нет"
+
+.PHONY: audit
+audit: ## уязвимости в зависимостях
+	composer audit --abandoned=report
+
+.PHONY: outdated
+outdated: ## устаревшие зависимости
+	composer outdated --direct
