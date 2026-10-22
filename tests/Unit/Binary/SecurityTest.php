@@ -115,7 +115,7 @@ final class SecurityTest extends TestCase
         $largeData = str_repeat("\x00", 100);
 
         $this->expectException(BufferOverflowException::class);
-        $this->expectExceptionMessage('Buffer overflow protection');
+        $this->expectExceptionMessageIsOrContains('Buffer overflow protection');
 
         Binary::unpack($largeData, SimplePacket::class);
     }
@@ -144,7 +144,7 @@ final class SecurityTest extends TestCase
         $packed = Binary::pack($packet);
 
         $this->expectException(SecurityException::class);
-        $this->expectExceptionMessage('Maximum nesting depth exceeded');
+        $this->expectExceptionMessageIsOrContains('Maximum nesting depth exceeded');
 
         Binary::unpack($packed, DeepNestedPacket::class);
     }
